@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Header </title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar"> 
+            <ul class="nav">
+                <li><a class="button" href="#" style="background-color:#fff"> Home</a> </li>
+                <li><a class="button" href="#" style="background-color:#fff">About Us</a></li>
+                <li><a class="button" id="open2" href="#" style="background-color:#fff">Priceing</a></li>
+                <li><a class="button" id="open" href="#" style="background-color:#fff">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- first modal -->
+    <div class="modal-container" id="modal_container">
+        <div class="modal">
+            <h1>Login</h1>
+            <form action="" class="form">
+                <label for="">Your Email/Username</label>
+                <input type="text" name="" id="" placeholder="Email/Username"><br>
+                <label for="">Password</label>
+                <input type="password" name="" id="" placeholder="**********"><br>
+                <input type="submit" style="background-color:#04AA6D" name="" id="" >
+            </form><br>
+            <button class="close" id="close">close</button>
+        </div>
+    </div>
+
+
+    <!-- second modal -->
+    <div class="modal-container" id="modal_container2">
+        <div class="modal">
+            <h1>Prices</h1>
+            <div class="columns">
+                <ul class="price">
+                  <li class="header" style="background-color:#131615;color:#Fff">Basic</li>
+                  <li class="grey">$ 9.99 / year</li>
+                  <li>10GB Storage</li>
+                  <li>10 Emails</li>
+                  <li>10 Domains</li>
+                  <li>1GB Bandwidth</li>
+                  <li class="grey"><a href="#" class="price-button">Sign Up</a></li>
+                </ul>
+              </div>
+              
+              <div class="columns">
+                <ul class="price">
+                  <li class="header" style="background-color:#04AA6D">Pro</li>
+                  <li class="grey">$ 24.99 / year</li>
+                  <li>25GB Storage</li>
+                  <li>25 Emails</li>
+                  <li>25 Domains</li>
+                  <li>2GB Bandwidth</li>
+                  <li class="grey"><a href="#" class="price-button">Sign Up</a></li>
+                </ul>
+              </div>
+              
+              <div class="columns">
+                <ul class="price">
+                  <li class="header" style="background-color:#131615;color:#fff">Premium</li>
+                  <li class="grey">$ 49.99 / year</li>
+                  <li>50GB Storage</li>
+                  <li>50 Emails</li>
+                  <li>50 Domains</li>
+                  <li>5GB Bandwidth</li>
+                  <li class="grey"><a href="#" class="price-button">Sign Up</a></li>
+                </ul>
+              </div>
+              <br><br>
+            <button class="close" id="close2">close</button>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        //first modal
+        const open=document.getElementById("open");
+        const modal_container=document.getElementById("modal_container");
+        const close=document.getElementById("close");
+
+
+        //second modal ids here
+        const open2=document.getElementById("open2");
+        const modal_container2=document.getElementById("modal_container2");
+        const close2=document.getElementById("close2");
+
+
+
+
+        //first modal
+        open.addEventListener('click',() =>{
+            modal_container.classList.add("show");
+        } );
+        close.addEventListener('click',() =>{
+            modal_container.classList.remove("show");
+        } );
+
+
+        //second modal
+        open2.addEventListener('click',() =>{
+            modal_container2.classList.add("show");
+        } );
+        close2.addEventListener('click',() =>{
+            modal_container2.classList.remove("show");
+        } );
+    </script>
+</body>
+</html>
